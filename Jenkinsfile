@@ -32,7 +32,6 @@ pipeline {
         }
       }
       when {
-        beforeAgent true
         branch 'master'
       }
       steps {
@@ -44,7 +43,6 @@ pipeline {
     stage('Docker BnP') {
       agent any
       when {
-        beforeAgent true
         branch 'master'
       }
       steps {
@@ -61,7 +59,3 @@ pipeline {
     }
 
   }
-  tools {
-    maven 'Maven 3.6.3'
-  }
-}
